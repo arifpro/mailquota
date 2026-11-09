@@ -4,6 +4,14 @@
   "description": "Quota-aware SMTP account pool for Node.js. Wraps nodemailer, tracks per-account sending limits, and fails over safely between accounts and providers.",
   "license": "MIT",
   "author": "Arif",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arifpro/mailquota.git"
+  },
+  "homepage": "https://github.com/arifpro/mailquota#readme",
+  "bugs": {
+    "url": "https://github.com/arifpro/mailquota/issues"
+  },
   "type": "module",
   "sideEffects": false,
   "engines": {
