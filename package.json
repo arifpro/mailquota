@@ -1,0 +1,62 @@
+{
+  "name": "mailquota",
+  "version": "0.1.0",
+  "description": "Quota-aware SMTP account pool for Node.js. Wraps nodemailer, tracks per-account sending limits, and fails over safely between accounts and providers.",
+  "license": "MIT",
+  "author": "Arif",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.18"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "RESPONSIBLE_USE.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test \"test/*.test.mjs\"",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "nodemailer",
+    "smtp",
+    "email",
+    "transactional",
+    "otp",
+    "failover",
+    "fallback",
+    "quota",
+    "rate-limit",
+    "brevo",
+    "resend"
+  ],
+  "peerDependencies": {
+    "nodemailer": ">=6.9.0"
+  },
+  "peerDependenciesMeta": {
+    "nodemailer": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ioredis": "^6.0.0",
+    "nodemailer": "^10.5.0",
+    "redis": "^6.3.1",
+    "typescript": "^7.0.2"
+  }
+}
